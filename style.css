@@ -1,0 +1,394 @@
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: radial-gradient(circle, #000000, #2c003e);
+    color: #e0e0e0;
+    height: 100vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    background: radial-gradient(circle, #000000, #2c003e);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header h1 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #333;
+    border-radius: 5px;
+}
+
+section {
+    padding: 2rem 0;
+    margin-top: 80px; /* Adjust this value to match the height of your header */
+}
+
+section .content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#about .content {
+    text-align: right;
+    margin-right: 10%;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around; /* Meratakan skill item dengan jarak antar item */
+    flex-wrap: nowrap; /* Mencegah elemen beralih ke bawah */
+    max-width: 100%; /* Membiarkan container skill memenuhi lebar */
+    gap: 2rem; /* Jarak antar skill */
+}
+
+#skills {
+    padding: 3rem 0;
+    background-color: rgba(44, 0, 62, 0.2); /* Tambahkan warna latar belakang */
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column; /* Menyusun item menjadi satu kolom */
+    align-items: center; /* Memusatkan item di tengah */
+    gap: 2rem; /* Menambah jarak antar skill */
+    max-width: 100%; /* Menghilangkan batas lebar */
+    margin: 0 auto; /* Memastikan container berada di tengah */
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: row; /* Membiarkan gambar dan teks berada dalam satu baris */
+    align-items: center;
+    justify-content: center;
+    width: 250px; /* Menetapkan lebar untuk setiap skill item */
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+.skill-logo {
+    width: 150px; /* Ukuran logo lebih besar */
+    height: 150px;
+    margin-bottom: 1rem;
+}
+
+.skill-title {
+    font-size: 1.6rem; /* Teks judul lebih besar */
+    font-weight: bold;
+    color: #e0e0e0;
+    margin-top: 0.5rem;
+}
+
+.skill-description {
+    font-size: 1rem;
+    color: #bfbfbf;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+}
+
+
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(31, 31, 31, 0.2);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-top: 1rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: rgba(44, 0, 62, 0.2);
+    color: #e0e0e0;
+}
+
+form button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #5c27fe;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #333;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project {
+    flex: 1 1 45%;
+    margin: 1rem;
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+footer {
+    background: radial-gradient(circle, #000000, #2c003e);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    section .content {
+        text-align: center;
+    }
+
+    .project {
+        flex: 1 1 100%;
+    }
+}
+
+#about .content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: justify;
+    padding: 0 1rem;
+}
+
+#about img {
+    display: block;
+    margin: 0 auto 20px;
+    width: 300px; /* Adjust the size as needed */
+    height: 300px; /* Adjust the size as needed */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff; /* Optional: Add a border */
+}
+
+#about p {
+    margin-top: 20px; /* Adds space between the image and the text */
+    text-align: justify; /* Ensures the text is justified */
+}
+/* Styling for Thumbnail Section with Softer Gradient and Lowered Text */
+#thumbnail {
+    position: relative;
+    padding: 8rem 0; /* Increased padding for more space above and below */
+    background: linear-gradient(135deg, rgba(30, 0, 50, 0.9), rgba(60, 0, 80, 0.9));
+    color: #e0e0e0;
+    animation: fade-in 1.5s ease-in-out;
+    overflow: hidden;
+}
+
+/* Blurred and fading bottom effect */
+#thumbnail::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px; /* Adjusts bottom fade */
+    background: rgba(30, 0, 50, 0.8);
+    filter: blur(15px);
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.thumbnail-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.thumbnail-text {
+    flex: 2;
+    padding-right: 2rem;
+    margin-top: 3rem; /* Additional margin to lower the text */
+    opacity: 0;
+    animation: fade-in 1.5s forwards 0.5s;
+}
+
+.thumbnail-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.thumbnail-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-top: 1.5rem; /* Adds additional space between the heading and paragraph */
+}
+
+.thumbnail-image {
+    flex: 1;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-in-up 1.5s forwards 0.8s;
+}
+
+.thumbnail-image img {
+    width: 220px;
+    height: 220px;
+    border-radius: 20%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Fade-in and slight upward animation */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .thumbnail-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .thumbnail-text {
+        padding-right: 0;
+        margin-top: 2rem; /* Adjusted for smaller screens */
+        margin-bottom: 1.5rem;
+    }
+
+    .thumbnail-text h2 {
+        font-size: 2rem;
+    }
+
+    .thumbnail-text p {
+        font-size: 1rem;
+    }
+
+    .thumbnail-image img {
+        width: 180px;
+        height: 180px;
+    }
+
+
+}
+/* Mengatur jarak scroll untuk section agar tidak tertutup oleh header */
+section {
+    padding-top: 2rem; /* Menambah sedikit padding atas untuk estetika */
+    scroll-margin-top: 100px; /* Mengatur margin saat di-scroll */
+}
+
+/* Jika Anda memiliki header fixed, pastikan juga untuk menyesuaikan margin */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 80px; /* Sesuaikan dengan tinggi header */
+}
+#about, #skills, #portfolio, #contact {
+    padding-top: 30px; /* Sesuaikan padding atas agar terlihat rapi */
+}
+
