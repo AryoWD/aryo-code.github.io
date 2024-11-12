@@ -7,42 +7,67 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
     <style>
-        /* Styling for Skills Section */
         #skills {
-            padding: 2rem 0;
-        }
-    
-        .content {
-            text-align: center;
+          padding: 2rem 0;
+          background-color: rgba(44, 0, 62, 0.2);
         }
     
         .skills-container {
-            display: flex;
-            flex-wrap: wrap; /* Membungkus elemen menjadi beberapa baris */
-            justify-content: center; /* Pusatkan elemen secara horizontal */
-            gap: 1.5rem; /* Jarak antara item */
-            max-width: 400px; /* Lebar maksimum untuk menyesuaikan elemen ke tengah */
-            margin: 2rem auto; /* Pusatkan skills-container */
+          display: flex;
+          justify-content: space-around; 
+          flex-wrap: nowrap; 
+          max-width: 100%;
+          gap: 2rem;
         }
     
         .skill-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100px; /* Menentukan lebar tiap skill agar rapi */
+          width: 30%;
+          display: flex;
+          flex-direction: column;
+          align-items: center; 
+          padding: 1rem;
+          background-color: rgba(255, 255, 255, 0.1);
+          border-radius: 10px;
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
     
         .skill-logo {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 0.5rem;
+          width: 150px; 
+          height: 150px; 
+          margin-bottom: 1rem;
         }
     
         .skill-title {
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
+          font-size: 1.6rem; 
+          font-weight: bold;
+          color: #e0e0e0;
+          margin-top: 0.5rem;
+          text-align: center;
         }
-    </style>
+    
+        .skill-description {
+          font-size: 1rem;
+          color: #bfbfbf;
+          margin-top: 0.5rem;
+          line-height: 1.5;
+          text-align: center;
+        }
+    
+        @media (max-width: 768px) {
+          .skills-container {
+            flex-direction: column; 
+            align-items: center; 
+          }
+    
+          .skill-item {
+            width: 100%;
+          }
+        }
+      </style>
+    </head>
+    <body>
+      </body>
+    </html>
     
 </head>
 <body>
@@ -59,7 +84,7 @@
             </nav>
         </div>
     </header>
-    <!-- Thumbnail Section -->
+   
     <section id="thumbnail">
         <div class="thumbnail-content">
             <div class="thumbnail-text">
@@ -67,7 +92,7 @@
                 <p>I am a graphic designer with an interest in minimalist and modern design. Here, you will find a variety of design projects, from logos to UI/UX design. Interested in working together? Don't hesitate to contact me!</p>
             </div>
             <div class="thumbnail-image">
-                <img src="logo.jpg" alt="Portfolio Logo">
+                <img src="logo.png" alt="Portfolio Logo">
             </div>
         </div>
     </section>
@@ -110,18 +135,18 @@
             <div class="gallery">
                 <div class="project">
                     <img src="proyek1.jpg" alt="Project 1">
-                    <p>Project 1 Description</p>
+                    <p>I have experience in designing attractive visual concepts for various types of events. Starting from event logos, invitations, decorations, to social media, I am able to create a strong and consistent visual identity for each event.</p>
                 </div>
                 <div class="project">
                     <img src="proyek2.jpg" alt="Project 2">
-                    <p>Project 2 Description</p>
+                    <p>I have a knack for creating user interfaces that are not only visually appealing, but also easy to use. By focusing on optimal user experience, I am able to design UI/UX designs that drive engagement and increase user satisfaction.</p>
                 </div>
             </div>
         </div>
     </section>
     <section id="contact">
         <div class="content">
-            <h2>Contact</h2>
+            <h2>Contact Me</h2>
             <form action="submit_form.php" method="post">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
