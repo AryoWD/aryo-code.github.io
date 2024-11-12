@@ -66,7 +66,7 @@ nav ul li a:hover {
 
 section {
     padding: 2rem 0;
-    margin-top: 80px; /* Adjust this value to match the height of your header */
+    margin-top: 80px; 
 }
 
 section .content {
@@ -82,49 +82,42 @@ section .content {
 
 .skills-container {
     display: flex;
-    justify-content: space-around; /* Meratakan skill item dengan jarak antar item */
-    flex-wrap: nowrap; /* Mencegah elemen beralih ke bawah */
-    max-width: 100%; /* Membiarkan container skill memenuhi lebar */
-    gap: 2rem; /* Jarak antar skill */
+    justify-content: space-around; 
+    flex-wrap: nowrap;
+    max-width: 100%; 
+    gap: 2rem;
 }
 
 #skills {
     padding: 3rem 0;
-    background-color: rgba(44, 0, 62, 0.2); /* Tambahkan warna latar belakang */
+    background-color: rgba(44, 0, 62, 0.2); 
 }
 
 .skills-container {
     display: flex;
-    flex-direction: column; /* Menyusun item menjadi satu kolom */
-    align-items: center; /* Memusatkan item di tengah */
-    gap: 2rem; /* Menambah jarak antar skill */
-    max-width: 100%; /* Menghilangkan batas lebar */
-    margin: 0 auto; /* Memastikan container berada di tengah */
-}
-
-.skill-item {
-    display: flex;
-    flex-direction: row; /* Membiarkan gambar dan teks berada dalam satu baris */
-    align-items: center;
-    justify-content: center;
-    width: 250px; /* Menetapkan lebar untuk setiap skill item */
-    padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-}
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    gap: 1.5rem;
+    max-width: 100%;
+  }
+  
+  .skill-item {
+    width: 30%;
+    
+  }
+  
 
 
 
 
 .skill-logo {
-    width: 150px; /* Ukuran logo lebih besar */
+    width: 150px;
     height: 150px;
     margin-bottom: 1rem;
 }
 
 .skill-title {
-    font-size: 1.6rem; /* Teks judul lebih besar */
+    font-size: 1.6rem; 
     font-weight: bold;
     color: #e0e0e0;
     margin-top: 0.5rem;
@@ -247,35 +240,35 @@ footer {
 #about img {
     display: block;
     margin: 0 auto 20px;
-    width: 300px; /* Adjust the size as needed */
-    height: 300px; /* Adjust the size as needed */
+    width: 300px; 
+    height: 300px; 
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #fff; /* Optional: Add a border */
+    border: 2px solid #fff; 
 }
 
 #about p {
-    margin-top: 20px; /* Adds space between the image and the text */
-    text-align: justify; /* Ensures the text is justified */
+    margin-top: 20px; 
+    text-align: justify;
 }
-/* Styling for Thumbnail Section with Softer Gradient and Lowered Text */
+
 #thumbnail {
     position: relative;
-    padding: 8rem 0; /* Increased padding for more space above and below */
+    padding: 8rem 0;
     background: linear-gradient(135deg, rgba(30, 0, 50, 0.9), rgba(60, 0, 80, 0.9));
     color: #e0e0e0;
     animation: fade-in 1.5s ease-in-out;
     overflow: hidden;
 }
 
-/* Blurred and fading bottom effect */
+
 #thumbnail::after {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 150px; /* Adjusts bottom fade */
+    height: 150px; 
     background: rgba(30, 0, 50, 0.8);
     filter: blur(15px);
     opacity: 0.7;
@@ -294,7 +287,7 @@ footer {
 .thumbnail-text {
     flex: 2;
     padding-right: 2rem;
-    margin-top: 3rem; /* Additional margin to lower the text */
+    margin-top: 3rem;
     opacity: 0;
     animation: fade-in 1.5s forwards 0.5s;
 }
@@ -308,7 +301,7 @@ footer {
 .thumbnail-text p {
     font-size: 1.2rem;
     line-height: 1.8;
-    margin-top: 1.5rem; /* Adds additional space between the heading and paragraph */
+    margin-top: 1.5rem; 
 }
 
 .thumbnail-image {
@@ -328,13 +321,13 @@ footer {
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Fade-in animation */
+
 @keyframes fade-in {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-/* Fade-in and slight upward animation */
+
 @keyframes fade-in-up {
     from {
         opacity: 0;
@@ -346,7 +339,7 @@ footer {
     }
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .thumbnail-content {
         flex-direction: column;
@@ -355,7 +348,7 @@ footer {
 
     .thumbnail-text {
         padding-right: 0;
-        margin-top: 2rem; /* Adjusted for smaller screens */
+        margin-top: 2rem;
         margin-bottom: 1.5rem;
     }
 
@@ -374,21 +367,36 @@ footer {
 
 
 }
-/* Mengatur jarak scroll untuk section agar tidak tertutup oleh header */
+
 section {
-    padding-top: 2rem; /* Menambah sedikit padding atas untuk estetika */
-    scroll-margin-top: 100px; /* Mengatur margin saat di-scroll */
+    padding-top: 2rem;
+    scroll-margin-top: 100px;
 }
 
-/* Jika Anda memiliki header fixed, pastikan juga untuk menyesuaikan margin */
+
 header {
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    height: 80px; /* Sesuaikan dengan tinggi header */
+    height: 80px;
 }
 #about, #skills, #portfolio, #contact {
-    padding-top: 30px; /* Sesuaikan padding atas agar terlihat rapi */
+    padding-top: 30px; 
 }
 
+.thumbnail-image img {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  .thumbnail-image {
+    background: none;
+  }
+
+  .thumbnail-image img {
+    width: 300px;
+    height: 100px;
+  }
